@@ -2,6 +2,9 @@ html,
 * {
   box-sizing: boder-box; }
 
+body {
+  font-family: 'Open Sans', sans-serif; }
+
 .container {
   display: flex;
   justify-content: center;
@@ -14,6 +17,13 @@ html,
   width: 6rem;
   text-align: center;
   position: relative; }
+  .square h1 {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 2rem; }
+  .square:hover h1 {
+    display: none; }
   .square:hover a {
     display: inline; }
     .square:hover a:nth-child(1) {
@@ -40,7 +50,8 @@ html,
     margin-top: -1.4rem; }
   .square a {
     display: none;
-    position: absolute; }
+    position: absolute;
+    cursor: pointer; }
     .square a:nth-child(1) {
       top: 0px;
       left: 0px; }

@@ -10,31 +10,77 @@ html,
   height: 100vh; }
 
 .square {
-  height: 40rem;
-  width: 40rem;
-  text-align: center; }
+  height: 6rem;
+  width: 6rem;
+  text-align: center;
+  position: relative; }
+  .square:hover a {
+    display: inline; }
+    .square:hover a:nth-child(1) {
+      animation: .3s ease-out 0s icon; }
+    .square:hover a:nth-child(2) {
+      animation: .3s ease-out 0s iconTwo; }
+    .square:hover a:nth-child(3) {
+      animation: .3s ease-out 0s iconThree; }
+    .square:hover a:nth-child(4) {
+      animation: .3s ease-out 0s iconFour; }
   .square:hover:before {
     display: block;
-    animation: .8s ease-out 0s 1 resize; }
+    animation: .3s ease-out 0s 1 resize; }
   .square:before {
-    height: 6rem;
-    width: 6rem;
+    height: 9rem;
+    width: 9rem;
     content: '';
     display: none;
     position: absolute;
     border: solid .1rem black;
     transform: rotate(50deg);
-    margin-left: 10rem;
-    margin-top: 6rem; }
+    z-index: -1;
+    margin-left: -1.4rem;
+    margin-top: -1.4rem; }
+  .square a {
+    display: none;
+    position: absolute; }
+    .square a:nth-child(1) {
+      top: 0px;
+      left: 0px; }
+    .square a:nth-child(2) {
+      top: 0px;
+      right: 0px; }
+    .square a:nth-child(3) {
+      bottom: 0px;
+      left: 0px; }
+    .square a:nth-child(4) {
+      bottom: 0px;
+      right: 0px; }
   .square img {
     height: auto;
-    max-width: 2rem;
-    margin: 4rem; }
+    max-width: 1.5rem; }
 
 @keyframes resize {
   0% {
     transform: scale(0) rotate(50deg); }
   100% {
     transform: scale(1) rotate(50deg); } }
+@keyframes icon {
+  0% {
+    transform: translate3d(-60px, -60px, 0); }
+  100% {
+    transform: translate3d(0px, 0px, 0); } }
+@keyframes iconTwo {
+  0% {
+    transform: translate3d(60px, -60px, 0); }
+  100% {
+    transform: translate3d(0px, 0px, 0); } }
+@keyframes iconThree {
+  0% {
+    transform: translate3d(-60px, 60px, 0); }
+  100% {
+    transform: translate3d(0px, 0px, 0); } }
+@keyframes iconFour {
+  0% {
+    transform: translate3d(60px, 60px, 0); }
+  100% {
+    transform: translate3d(0px, 0px, 0); } }
 
 /*# sourceMappingURL=style.css.map */

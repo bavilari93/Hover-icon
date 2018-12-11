@@ -3,7 +3,8 @@ html,
   box-sizing: boder-box; }
 
 body {
-  font-family: 'Open Sans', sans-serif; }
+  font-family: 'Open Sans', sans-serif;
+  margin: 0; }
 
 .container {
   display: flex;
@@ -12,61 +13,72 @@ body {
   width: 100vw;
   height: 100vh; }
 
-.square {
+#square {
   height: 6rem;
   width: 6rem;
   text-align: center;
   position: relative; }
-  .square h1 {
+  #square h1 {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 200;
     font-size: 2rem; }
-  .square:hover h1 {
+  #square:hover h1 {
     display: none; }
-  .square:hover a {
+  #square:hover a {
     display: inline; }
-    .square:hover a:nth-child(1) {
+    #square:hover a:nth-child(1) {
       animation: .3s ease-out 0s icon; }
-    .square:hover a:nth-child(2) {
+    #square:hover a:nth-child(2) {
       animation: .3s ease-out 0s iconTwo; }
-    .square:hover a:nth-child(3) {
+    #square:hover a:nth-child(3) {
       animation: .3s ease-out 0s iconThree; }
-    .square:hover a:nth-child(4) {
+    #square:hover a:nth-child(4) {
       animation: .3s ease-out 0s iconFour; }
-  .square:hover:before {
+  #square:hover:before {
     display: block;
     animation: .3s ease-out 0s 1 resize; }
-  .square:before {
+  #square:before {
     height: 9rem;
     width: 9rem;
     content: '';
     display: none;
     position: absolute;
-    border: solid .1rem black;
+    border: solid .01rem grey;
     transform: rotate(50deg);
     z-index: -1;
+    box-shadow: 5px 5px 5px #aaaaaa;
     margin-left: -1.4rem;
     margin-top: -1.4rem; }
-  .square a {
+  #square a {
     display: none;
     position: absolute;
     cursor: pointer; }
-    .square a:nth-child(1) {
+    #square a:nth-child(1) {
       top: 0px;
       left: 0px; }
-    .square a:nth-child(2) {
+    #square a:nth-child(2) {
       top: 0px;
       right: 0px; }
-    .square a:nth-child(3) {
+    #square a:nth-child(3) {
       bottom: 0px;
       left: 0px; }
-    .square a:nth-child(4) {
+    #square a:nth-child(4) {
       bottom: 0px;
       right: 0px; }
-  .square img {
+  #square img {
     height: auto;
     max-width: 1.5rem; }
+
+.test {
+  transition: 0.5s;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow: auto;
+  position: fixed;
+  background: pink; }
 
 @keyframes resize {
   0% {
